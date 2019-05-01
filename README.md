@@ -1,14 +1,5 @@
-# A Blank PhoneGap App
+# Construct 2 Admob Guide
 
-## Usage
-
-### PhoneGap CLI
-
-    $ phonegap create my-app --template blank
-
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
+To accompany kindle book: 
+Make Money With Construct 2 Games : How To Add Admob To Android Games
 
