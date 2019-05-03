@@ -9,6 +9,21 @@
     <title>Blank App</title>
     <link rel="stylesheet" href="css/onsenui.css" />
     <link rel="stylesheet" href="css/onsen-css-components.min.css" />
+    <style>
+      img {
+        width: 100%;
+      }
+      p {
+        margin: 20px;
+      }
+      .fig {
+        text-align: center;
+        font-weight: bold;
+      }
+      .mypage {
+        background-color: white;
+      }
+    </style>
   </head>
   <body>
     <ons-splitter>
@@ -18,7 +33,10 @@
             <ons-list-item onclick="fn.load('home.html')" tappable>
               Home
             </ons-list-item>
-            <ons-list-item onclick="fn.load('1.html')" tappable>
+            <ons-list-item
+              onclick="fn.load('1.html',  '1. Create C2 Game')"
+              tappable
+            >
               1. Create Simple C2 Game
             </ons-list-item>
           </ons-list>
