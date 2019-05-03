@@ -1,0 +1,363 @@
+<ons-navigator id="appNavigator" swipeable swipe-target-width="80px">
+  <ons-page>
+    <ons-splitter id="appSplitter">
+      <ons-splitter-side
+        id="sidemenu"
+        page="sidemenu.html"
+        swipeable
+        side="right"
+        collapse=""
+        width="260px"
+      ></ons-splitter-side>
+      <ons-splitter-content page="tabbar.html"></ons-splitter-content>
+    </ons-splitter>
+  </ons-page>
+</ons-navigator>
+
+<template id="sidemenu.html">
+  <ons-page>
+    <div class="profile-pic">
+      <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" />
+    </div>
+
+    <ons-list-title>Access</ons-list-title>
+    <ons-list>
+      <ons-list-item onclick="fn.loadView(0)">
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-home, material:md-home"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Home
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-item onclick="fn.loadView(1)">
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-edit, material:md-edit"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Forms
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-item onclick="fn.loadView(2)">
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-film-marker, material: md-movie-alt"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Animations
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-link"></ons-icon>
+        </div>
+      </ons-list-item>
+    </ons-list>
+
+    <ons-list-title style="margin-top: 10px">Links</ons-list-title>
+    <ons-list>
+      <ons-list-item
+        onclick="fn.loadLink('https://onsen.io/v2/docs/guide/js/')"
+      >
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-document-text"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Docs
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-item
+        onclick="fn.loadLink('https://github.com/OnsenUI/OnsenUI')"
+      >
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-social-github"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          GitHub
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-item onclick="fn.loadLink('https://community.onsen.io/')">
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-chatboxes"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Forum
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+      <ons-list-item onclick="fn.loadLink('https://twitter.com/Onsen_UI')">
+        <div class="left">
+          <ons-icon
+            fixed-width
+            class="list-item__icon"
+            icon="ion-social-twitter"
+          ></ons-icon>
+        </div>
+        <div class="center">
+          Twitter
+        </div>
+        <div class="right">
+          <ons-icon icon="fa-external-link"></ons-icon>
+        </div>
+      </ons-list-item>
+    </ons-list>
+
+    <script>
+      ons.getScriptPage().onInit = function() {
+        // Set ons-splitter-side animation
+        this.parentElement.setAttribute(
+          'animation',
+          ons.platform.isAndroid() ? 'overlay' : 'reveal'
+        );
+      };
+    </script>
+
+    <style>
+      .profile-pic {
+        width: 200px;
+        background-color: #fff;
+        margin: 20px auto 10px;
+        border: 1px solid #999;
+        border-radius: 4px;
+      }
+
+      .profile-pic > img {
+        display: block;
+        max-width: 100%;
+      }
+
+      ons-list-item {
+        color: #444;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="home.html">
+  <ons-page>
+    <p class="intro">
+      This is a kitchen sink example that shows off the components of Onsen
+      UI.<br /><br />
+    </p>
+
+    <ons-card
+      onclick="fn.pushPage({'id': 'pullHook.html', 'title': 'PullHook'})"
+    >
+      <div class="title">Pull Hook</div>
+      <div class="content">
+        Simple "pull to refresh" functionality to update data.
+      </div>
+    </ons-card>
+    <ons-card onclick="fn.pushPage({'id': 'dialogs.html', 'title': 'Dialogs'})">
+      <div class="title">Dialogs</div>
+      <div class="content">
+        Components and utility methods to display many types of dialogs.
+      </div>
+    </ons-card>
+    <ons-card onclick="fn.pushPage({'id': 'buttons.html', 'title': 'Buttons'})">
+      <div class="title">Buttons</div>
+      <div class="content">
+        Different styles for buttons, floating action buttons and speed dials.
+      </div>
+    </ons-card>
+    <ons-card
+      onclick="fn.pushPage({'id': 'carousel.html', 'title': 'Carousel'})"
+    >
+      <div class="title">Carousel</div>
+      <div class="content">
+        Customizable carousel that can be optionally fullscreen.
+      </div>
+    </ons-card>
+    <ons-card
+      onclick="fn.pushPage({'id': 'infiniteScroll.html', 'title': 'Infinite Scroll'})"
+    >
+      <div class="title">Infinite Scroll</div>
+      <div class="content">
+        Two types of infinite lists: "Load More" and "Lazy Repeat".
+      </div>
+    </ons-card>
+    <ons-card
+      onclick="fn.pushPage({'id': 'progress.html', 'title': 'Progress'})"
+    >
+      <div class="title">Progress</div>
+      <div class="content">
+        Linear progress, circular progress and spinners.
+      </div>
+    </ons-card>
+
+    <style>
+      .intro {
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+
+      ons-card {
+        cursor: pointer;
+        color: #333;
+      }
+
+      .card__title,
+      .card--material__title {
+        font-size: 20px;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<template id="pullHook.html">
+  <ons-page>
+    <ons-toolbar>
+      <div class="left">
+        <ons-back-button>Home</ons-back-button>
+      </div>
+      <div class="center"></div>
+    </ons-toolbar>
+
+    <ons-pull-hook id="pull-hook" threshold-height="120px">
+      <ons-icon
+        id="pull-hook-icon"
+        size="22px"
+        class="pull-hook-content"
+        icon="fa-arrow-down"
+      ></ons-icon>
+    </ons-pull-hook>
+
+    <ons-list id="kitten-list">
+      <ons-list-header>Pull to refresh</ons-list-header>
+    </ons-list>
+
+    <script>
+      ons.getScriptPage().onInit = function() {
+        this.querySelector(
+          'ons-toolbar div.center'
+        ).textContent = this.data.title;
+        var pullHook = document.getElementById('pull-hook');
+        var icon = document.getElementById('pull-hook-icon');
+        pullHook.addEventListener('changestate', function(event) {
+          switch (event.state) {
+            case 'initial':
+              icon.setAttribute('icon', 'fa-arrow-down');
+              icon.removeAttribute('rotate');
+              icon.removeAttribute('spin');
+              break;
+            case 'preaction':
+              icon.setAttribute('icon', 'fa-arrow-down');
+              icon.setAttribute('rotate', '180');
+              icon.removeAttribute('spin');
+              break;
+            case 'action':
+              icon.setAttribute('icon', 'fa-spinner');
+              icon.removeAttribute('rotate');
+              icon.setAttribute('spin', true);
+              break;
+          }
+        });
+        var getRandomName = function() {
+          const names = [
+            'Oscar',
+            'Max',
+            'Tiger',
+            'Sam',
+            'Misty',
+            'Simba',
+            'Coco',
+            'Chloe',
+            'Lucy',
+            'Missy'
+          ];
+          return names[Math.floor(Math.random() * names.length)];
+        };
+        var getRandomUrl = function() {
+          const width = 40 + Math.floor(20 * Math.random());
+          const height = 40 + Math.floor(20 * Math.random());
+          return `https://placekitten.com/g/${width}/${height}`;
+        };
+        var getRandomKitten = function() {
+          return {
+            name: getRandomName(),
+            url: getRandomUrl()
+          };
+        };
+        var getRandomData = function() {
+          const data = [];
+          for (var i = 0; i < 8; i++) {
+            data.push(getRandomKitten());
+          }
+          return data;
+        };
+        var createKitten = function(kitten) {
+          return ons.createElement(`
+                <ons-list-item>
+                  <div class="left">
+                    <img class="list-item__thumbnail" src="${kitten.url}">
+                  </div>
+                  <div class="center">${kitten.name}</div>
+                </ons-list-item>
+              `);
+        };
+        var kittens = getRandomData();
+        for (kitty of kittens) {
+          var kitten = createKitten(kitty);
+          document.getElementById('kitten-list').appendChild(kitten);
+        }
+        pullHook.onAction = function(done) {
+          setTimeout(function() {
+            document
+              .getElementById('kitten-list')
+              .appendChild(createKitten(getRandomKitten()));
+            done();
+          }, 400);
+        };
+      };
+    </script>
+
+    <style>
+      .pull-hook-content {
+        color: #666;
+        transition: transform 0.25s ease-in-out;
+      }
+    </style>
+  </ons-page>
+</template>
+
+<style>
+  ons-splitter-side[animation='overlay'] {
+    border-left: 1px solid #bbb;
+  }
+</style>
