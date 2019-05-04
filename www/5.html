@@ -1,0 +1,315 @@
+<ons-page id="5.html">
+  <ons-toolbar>
+    <div class="left">
+      <div class="left"><ons-back-button>Home</ons-back-button></div>
+    </div>
+    <div class="center" style="text-align: center"></div>
+  </ons-toolbar>
+  <p>
+    In this chapter, we will add 2 more functions to the Admob event sheet and
+    call those functions from Event sheet 1.
+  </p>
+  <p>
+    Open the Admob event sheet to add another function. Then click on the Add
+    event button as shown in Fig 5-1 below.
+  </p>
+  <p>
+      <img src="images/5-1.JPG" alt="">
+      <div class="fig">Fig 5-1. Click on button Add event</div>
+  </p>
+  <p>
+      Then, in the next window that appears, click on the Function
+            object as shown in Fig 5-2 below.    
+  </p>
+  <p>
+        <img src="images/5-2.JPG" alt="">
+        <div class="fig">Fig 5-2. Click on the Function object</div>
+  </p>
+  <p>
+            In the next screen that follows, select the ‘On function’ event
+            as shown in Fig 5-3 below.   
+  </p>
+  <p>
+        <img src="images/5-3.JPG" alt="">
+        <div class="fig">Fig 5-3. Selecting ‘On function’ event</div>
+  </p>
+  <p>
+            Then, in the next screen, give a name for your function. Call it
+            ‘admobShowBanner’ as shown in Fig 5-4 below.
+  </p>
+  <p>
+       <img src="images/5-4.JPG" alt=""> 
+       <div class="fig">Fig 5-4. Naming your function</div>
+  </p>
+  <p>
+            At this point, your Admob event sheet should look like Fig 5-
+            5 below.   
+  </p>
+  <p>
+      <img src="images/5-5.JPG" alt="">
+      <div class="fig">Fig 5-5. Ready to add action</div>
+  </p>
+  <p>
+            In Fig 5-5 above, click on the button ‘Add action’ to insert an
+            action to your function.
+            In the next screen as shown in Fig 5-6 below, select the
+            object ‘CordovaAdmobFree’.  
+  </p>
+  <p>
+      <img src="images/5-6.JPG" alt="">
+      <div class="fig">Fig 5-6. Selecting object ‘CordovaAdmobFree’</div>
+  </p>
+  <p>
+            Then, you will see the next window as shown in Fig 5-7
+            below. Go ahead and select the action ‘Show a banner’.   
+  </p>
+  <p>
+        <img src="images/5-7.JPG" alt="">
+        <div class="fig">Fig 5-7. Adding an action called ‘Show a banner’</div>
+  </p>
+  <p>
+            After completing all the steps above, your Admob event sheet
+            should look like Fig 5-8 below. 
+  </p>
+  <p>
+        <img src="images/5-8.JPG" alt="">
+        <div class="fig">Fig 5-8. Completed adding action to function ‘admobShowBanner’</div>
+  </p>
+  <p>
+            Next, we will create another function called
+            ‘admobShowInterstitial’ using the same sequence of steps
+            from Fig 5-1 to Fig 5-8 above.
+            Go ahead and click on the button ‘Add event’ as in Fig 5-1,
+            followed by selecting the Function object as in Fig 5-2. Then,
+            select the ‘On Function’ event as shown in Fig 5-3.
+            You will then come to the windows where you will need to
+            enter a name for your function as shown in Fig 5-9 below.
+  </p>
+  <p>
+      <img src="images/5-9.JPG" alt="">
+      <div class="fig">Fig 5-9. Name your function ‘admobShowInterstitial’</div>
+  </p>
+  <p>
+            Give your function the name ‘admobShowInterstitial’. Then,
+            in the next screen as shown in Fig 5-10 below, click on the
+            button ‘Add action’.  
+  </p>
+  <p>
+      <img src="images/5-10.JPG" alt="">
+      <div class="fig">Fig 5-10. Adding an action</div>
+  </p>
+  <p>
+            Then, select the ‘CordovaAdmobFree’ object as shown in Fig
+            5-6 in an earlier step which is similar.
+            In the next screen, as in Fig 5-11 below, select the action
+            ‘Load and show an interstitial’. Do not select ‘Show a
+            preloaded interstitial’ - it does not work. 
+  </p>
+  <p>
+        <img src="images/5-11.JPG" alt="">
+        <div class="fig">Fig 5-11. Select action ‘Load and show an interstitial’</div>
+  </p>
+  <p>
+            In the next screen as shown in Fig 5-12 below, accept the
+            default setting Show Overlap to true.
+  </p>
+  <p>
+      <img src="images/5-12.JPG" alt="">
+      <div class="fig">Fig 5-12. Show overlap true</div>
+  </p>
+  <p>
+            At this stage, your Admob event sheet should look something
+            like Fig 5-13 below.    
+  </p>
+  <p>
+        <img src="images/5-13.JPG" alt="">
+        <div class="fig">Fig 5-13. Completed all 3 functions</div>
+  </p>
+  <p>
+            Now that we have completed all 3 functions it is time to call
+            those functions from Event sheet 1.   
+  </p>
+  
+<h3>CALLING THE FUNCTIONS</h3>
+<p>
+            At this stage, Event sheet 1 has got a btnShowBannerAd
+            event as shown in Fig 5-14 below.
+</p>
+<p>
+      <img src="images/5-14.JPG" alt="">
+      <div class="fig">Fig 5-14. Event sheet 1 with one button event</div>
+</p>
+<p>
+            Go ahead and add an ‘On start of layout’ event as shown in
+            Fig 5-15 below.   
+</p>
+<p>
+      <img src="images/5-15.JPG" alt="">
+      <div class="fig">Fig 5-15. Adding event ‘On start of layout’</div>
+</p>
+<p>
+            Then click on ‘Add action’ and then click on the Function
+            object as shown in Fig 5-16 below. 
+</p>
+<p>
+      <img src="images/5-16.JPG" alt="">
+      <div class="fig">Fig 5-16. Add Function object</div>
+</p>
+<p>
+            Then, in the next screen, select the action ‘Call function’ as
+            shown in Fig 5-17 below.    
+</p>
+<p>
+    <img src="images/5-17.JPG" alt="">  
+    <div class="fig">Fig 5-17. ‘Call function’ action</div>
+</p>
+<p>
+            You will then get to choose the function you wish to call. This
+            is shown in Fig 5-18 below.    
+</p>
+<p>
+      <img src="images/5-18.JPG" alt="">
+      <div class="fig">Fig 5-18. Selecting the function ‘loadAdmobAds’</div>
+</p>
+<p>
+            From Fig 5-18 above, note that when you type the double-
+            quotes “ in the textbox, a dropdown list appears and shows
+            you all the availabe functions. Go ahead and select the
+            function ‘loadAdmobAds’.
+            Next, we need to reference the Admob event sheet. To do
+            that, right-click on the event sheet and you will see a
+            dropdown list as shown in Fig 5-19 below.
+</p>
+<p>
+      <img src="images/5-19.JPG" alt="">
+      <div class="fig">Fig 5-19. Right-click and select ‘Include event sheet’</div>
+</p>
+<p>
+            Go ahead and click on ‘Include event sheet’. You will then see
+            the next window as shown in Fig 5-20 below.
+            Go ahead and select the Admob event sheet, then click on
+            button ‘OK’.    
+</p>
+<p>
+      <img src="images/5-20.JPG" alt="">
+      <div class="fig">Fig 5-20. Selecting the ‘Admob’ event sheet</div>
+</p>
+<p>
+            At this stage, your Event sheet 1 should look Fig 5-21 below.
+</p>
+<p>
+      <img src="images/5-21.JPG" alt="">
+      <div class="fig">Fig 5-21. Added reference to Admob event sheet</div>
+</p>
+<p>
+            Add the function call “admobShowBanner” for the
+            btnShowBannerAd event as shown in Fig 5-22 below.   
+</p>
+<p>
+      <img src="images/5-22.JPG" alt="">
+      <div class="fig">Fig 5-22. Add the function call “admobShowBanner”</div>
+</p>
+<p>
+            Then, go ahead and complete the code by adding another
+            event for btnShowInterstitialAd and also its corresponding
+            Function call “admobShowInterstitial” as shown in Fig 5-23
+            below.
+</p>
+<p>
+      <img src="images/5-23.JPG" alt="">
+      <div class="fig">Fig 5-23. Completed Event sheet 1</div>
+</p>
+<p>
+            Our coding is now complete. To test our buttons to make
+            sure they are properly hooked up to the functions, I have
+            added a Text object into the layout as shown in Fig 5-24
+            below.  
+</p>
+<p>
+      <img src="images/5-24.JPG" alt="">
+      <div class="fig">Fig 5-24. Added Text object and called it txtDebug</div>
+</p>
+<p>
+            Fig 5-24 above shows that I have added a Text object and
+            called it txtDebug.
+            I then went ahead and added the corresponding txtDebug
+            code into the 2 functions in Admob event sheet as shown in
+            Fig 5-25 below.   
+</p>
+<p>
+      <img src="images/5-25.JPG" alt="">
+      <div class="fig">Fig 5-25. Added txtDebug messages to the functions</div>
+</p>
+<p>
+            Now, run the game. Your txtDebug will show the message:
+            “ads loaded” as shown in Fig 5-26 below.
+</p>
+<p>
+      <img src="images/5-26.JPG" alt="">
+      <div class="fig">Fig 5-26. When game starts, txtDebug says ‘ads loaded’</div>
+</p>
+<p>
+            Next, click on the button ‘Show Banner Ad’ and message
+            with the corresponding messages: “showing banner ad” will
+            be shown as in Fig 5-27 below. 
+</p>
+<p>
+      <img src="images/5-27.JPG" alt="">
+      <div class="fig">Fig 5-27. Clicking Show Banner Ad button</div>
+</p>
+<p>
+            Then, when you click on button ‘Show Interstitial Ad’,
+            txtDebug will show message “showing interstitial ad” as
+            shown in Fig 5-28 below.  
+</p>
+<p>
+      <img src="images/5-28.JPG" alt="">
+      <div class="fig">Fig 5-28. Testing button Show Interstitial Ad</div>
+</p>
+<p>
+            Now, we know for sure that our 3 functions are being called
+            on start of layout and when each of the 2 buttons are clicked.
+            Next, we need to set Test Mode to true as shown in Fig 5-29
+            below.   
+</p>
+<p>
+      <img src="images/5-29.JPG" alt="">
+      <div class="fig">Fig 5-29. Setting Test Mode to true</div>
+</p>
+<p>
+            To set Test Mode to true, first select the CordovaAdmobFree
+            object as indicated by the red label 1 in Fig 5-29 above. Then
+            in the properties panel on the left, set Test Mode to true as
+            indicated by the red label 2. Setting Test Mode to true allows
+            you to click on the AdMob ads to test them.
+            Then, fill in the Banner ID:
+</p>
+<p>
+            ca-app-pub-3940256099942544/6300978111 
+</p>
+<p>
+            and Interstial ID: 
+</p>
+<p>
+            ca-app-pub-3940256099942544/1033173712
+</p>
+<p>
+            Fig 5-30 below shows the correct settings with the Banner ID
+            and Interstitial ID filled in. These are test IDs given by Google
+            AdMob from their website:
+</p>
+<p>
+            bit.ly/2Z9ijq7
+</p>
+<p>
+     <img src="images/5-30.JPG" alt=""> 
+     <div class="fig">Fig 5-30. Test Banner ID and Test Interstitial ID</div>
+</p>
+<p>
+            Note that we cannot test the ads directly in the browser. For
+            that we will need to build an apk file and install it on an
+            android device.
+            This concludes this chapter. In the next chapter we will be
+            exporting our game in preparation for building our apk file.  
+</p>
+</ons-page>

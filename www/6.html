@@ -1,0 +1,100 @@
+<ons-page id="6.html">
+  <ons-toolbar>
+    <div class="left">
+      <div class="left"><ons-back-button>Home</ons-back-button></div>
+    </div>
+    <div class="center" style="text-align: center"></div>
+  </ons-toolbar>
+  <p>
+    In this chapter, we will learn how to export our project as a Cordova
+    project and then configure it for building an apk file.
+  </p>
+  <p>
+    Go to your project settings and fill in the Name, Version, Description and
+    ID as shown in Fig 6-1 below.
+  </p>
+  <p>
+      <img src="images/6-1.JPG" alt="">
+      <div class="fig">Fig 6-1. Setting Name, Version, Description and ID</div>
+  </p>
+  <p>
+      Then export your game and select Cordova as shown in Fig 6-
+            2 below.   
+  </p>
+  <p>
+      <img src="images/6-2.JPG" alt="">
+      <div class="fig">Fig 6-2. Exporting a Cordova project</div>
+  </p>
+  <p>
+            Then select a location for the export as shown in Fig 6-3
+            below.     
+  </p>
+  <p>
+      <img src="images/6-3.JPG" alt="">
+      <div class="fig">Fig 6-3. Set location for the export</div>
+  </p>
+  <p>
+            Do not Minify script. Just click the button Next. You will then
+            see the Cordova export settings as shown in Fig 6-4 below.
+            Make sure your settings is exactly as show. Then click on the
+            button ‘Export’.     
+  </p>
+  <p>
+      <img src="images/6-4.JPG" alt="">
+      <div class="fig">Fig 6-4. Correct settings for exporting Cordova project</div>
+  </p>
+  <p>
+            After exporting the project, open the exported folder and you
+            should see the files and folders as shown in Fig 6-5 below. In
+            this case the exported folder is called Test. Go ahead and
+            delete the config.json file.   
+  </p>
+  <p>
+      <img src="images/6-5.JPG" alt="">
+      <div class="fig">Fig 6-5. Export cordova project folder</div>
+  </p>
+  <p>
+            Then, edit the config.xml file using any text or code editor as
+            shown in Fig 6-6 below.
+            Add these two lines:   
+  </p>
+  <p>
+            &lt;preference name=&quot;phonegap-version&quot; value=&quot;cli-8.0.0&quot;/&gt;
+  </p>
+  <p>
+            &lt;plugin name=&quot;cordova-plugin-admob-free&quot;&gt;&lt;variable
+            name=&quot;ADMOB_APP_ID&quot; value=&quot;ca-app-pub-
+            3940256099942544~3347511713&quot; /&gt;&lt;/plugin&gt;
+  </p>
+  <p>
+            in the correct places as shown in Fig 6-6 as indicated by the
+            red labels 1 and 2.
+  </p>
+  <p>
+    <img src="images/6-6.JPG" alt="">    
+    <div class="fig">Fig 6-6. Adding phonegap version and app id to config.xml</div>
+  </p>
+  <p>
+            Note that the App ID is given by Google Admob for testing
+            purposes. You can refer to this page:   
+  </p>
+  <p>
+            bit.ly/2V1Dbwv
+  </p>
+  <p>
+            You will also need to create 2 icons sized 256 x 256 and 128
+            x 128 pixels called icon-256.png and icon-128.png and
+            replace those in the www folder.
+            For purposes of this chapter, you can use mine :
+  </p>
+  <p>
+            bit.ly/2Vfd9KX   (icon-128.png)
+  </p>
+  <p>
+            bit.ly/2PLZQvR  (icon-256.png)
+  </p>
+  <p>
+            Now you are ready to upload to github.
+            We will do that in the next chapter.
+  </p>
+</ons-page>
