@@ -22,7 +22,7 @@ document.addEventListener('init', function(event) {
         animation: 'lift'
       });
     };
-  } else if (page.id === 'home.html') {
+  } else if (page.id === '1.html' || page.id === '2.html') {
     page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 
     //--- admob ---
