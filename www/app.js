@@ -16,10 +16,13 @@ document.addEventListener('init', function(event) {
   var page = event.target;
   //-- if - left here for future reference --
   if (page.id === 'home.html') {
-    page.querySelector('#testbutton').onclick = function() {
+    page.querySelector('#backToTopBtn').onclick = function() {
       document
         .querySelector('#myNavigator')
-        .pushPage('1.html', { data: { title: 'Page 1!' }, animation: 'slide' });
+        .pushPage('home.html', {
+          data: { title: 'Page 1!' },
+          animation: 'lift'
+        });
     };
     //-- else if - left here for future reference --
   } else if (page.id === '99.html' || page.id === '100.html') {

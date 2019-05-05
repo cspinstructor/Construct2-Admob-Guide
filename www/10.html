@@ -1,0 +1,143 @@
+<ons-page id="10.html">
+  <ons-toolbar>
+    <div class="left">
+      <div class="left"><ons-back-button>Home</ons-back-button></div>
+    </div>
+    <div class="center" style="text-align: center"></div>
+  </ons-toolbar>
+  <p>
+    In this chapter we will learn how to create a release built for our apk.
+    This involves creating a keystore signing key, uploading it to phonegap
+    build and rebuilding your apk.
+  </p>
+  <h3>JAVA AND THE KEYTOOL</h3>
+  <p>
+    In order to be able to sign your apk’s, you will need to first generate a
+    signing keystore. The tool used to generate a keystore is called keytool,
+    and it comes with java. Therefore, in this section, we will learn how to
+    install Java.
+  </p>
+  <p>
+    Java JDK comes from Oracle. So using google, search for ‘Download Java’.
+    Once you find the download link, follow the link and then download the
+    latest version of Java. After installing, you will need to set the path
+    environment variable to your java bin folder. On my machine, the path to
+    java bin folder is as shown in Fig 10-1 below.
+  </p>
+  <p>
+    <img src="images/10-1.png" alt="" />
+    <div class="fig">Fig 10-1 Path to java bin folder</div>
+  </p>
+  <p>
+            On my Windows 10 machine the path is as follows:
+  </p>
+  <p>
+            C:\Program Files (x86)\Java\jre1.8.0_201\bin   
+  </p>
+  <p>
+            It may be different for you. You need to check and copy your
+            own machine’s path. After copying the path, we will append
+            this to the path environment variable.
+            First, go to System Properties and click on the button
+            ‘Environment Variables…’ as shown in Fig 10-2 below.   
+  </p>
+  <p>
+        <img src="images/10-2.png" alt="">
+        <div class="fig">Fig 10-2 Button for setting Environment Variables</div>
+  </p>
+  <p>
+            This will take you to the next screen as shown in Fig 10-3
+            below.
+  </p>
+  <p>
+            <img src="images/10-3.png" alt="">
+            <div class="fig">Fig 10-3 List of System variables</div>
+  </p>
+  <p>
+            From Fig 10-3 above, you can see a list of System variables in
+            the bottom panel. Select Path, then click on the button
+            ‘Edit…’.
+            This will take you to the next screen as shown in Fig 10-4
+            below.   
+  </p>
+  <p>
+            <img src="images/10-4.png" alt="">
+            <div class="fig">Fig 10-4 Click on button New and paste the path in</div>
+  </p>
+  <p>
+            In Fig 10-4 above, click on the button New and paste in the
+            path which you copied earlier. As you can see, I have created
+            a new path. You can then click on the Move Up button to
+            bring it to the top.
+            After having added the java bin path to the path environment
+            variable, you will need to close all your opened cmd terminal
+            and re-open again so that the new path can be read by cmd.  
+  </p>
+  <h3>CREATING A NEW KEYSTORE</h3>
+  <p>
+            Open a new cmd terminal and navigate to the folder where
+            you want to create a new keystore. Type in the command as
+            shown below:  
+  </p>
+  <p>
+            keytool -genkey -v -keystore Test.keystore -alias Test -keyalg
+            RSA -keysize 2048 -validity 10000   
+  </p>
+  <p>
+            Note that there is a space between keyalg and RSA. There
+            will be a series of questions asking you to type in the value
+            for the following keys:   
+  </p>
+  <p>
+            name
+  </p>
+  <p>
+            alias   
+  </p>
+  <p>
+            keypass
+  </p>
+  <p>
+            aliasPass   
+  </p> 
+  <p>
+            The keypass and aliasPass should be the same password. The
+            name and alias should also be the same.
+            After you have generated the keystore file, upload it to
+            build.phonegap.com. See Fig 10-5 below on how to do this.
+  </p> 
+  <p>
+            <img src="images/10-5.png" alt="">
+            <div class="fig">Fig 10-5 Uploading keystore to phonegap build</div>   
+  </p>   
+  <p>
+            Based on Fig 10-5, you first click on your profile. Then select
+            ‘Edit account’. Then click on the button ‘add key’.
+            Save your files, push to github then head over to
+            build.phonegap.com and unlock the keystore which you
+            uploaded earlier. See Fig 10-6 below on how to unlock the keystore.   
+  </p>
+  <p>
+            <img src="images/10-6.png" alt="">
+            <div class="fig">Fig 10-6. Select the keystore to use</div>  
+  </p>  
+  <p>
+            First you select the keystore that you wish to use. Then enter
+            the password for it as shown in Fig 10-7 below.
+  </p> 
+  <p>
+            <img src="images/10-7.png" alt="">
+            <div class="fig">Fig 10-7. Unlocking the keystore</div>     
+  </p>
+  <p>
+            Note that the certificate password and the keystore
+            passwords are the same. Then, build your apk. This will be a
+            release build which can be published on Google play.
+            You can download the capx file for this book’s project here:    
+  </p>
+  <p>bit.ly/2vErkKo</p>
+  <p>
+            With that we have come to the end of this chapter.   
+  </p>
+ 
+</ons-page>
