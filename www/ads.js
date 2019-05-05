@@ -1,14 +1,14 @@
 //------- Admob ----------
 var admobid = {
   //--- Test Ads ---
-  banner: 'ca-app-pub-3940256099942544/6300978111',
-  interstitial: 'ca-app-pub-3940256099942544/1033173712',
-  rewardvideo: 'ca-app-pub-3940256099942544/5224354917'
+  // banner: 'ca-app-pub-3940256099942544/6300978111',
+  // interstitial: 'ca-app-pub-3940256099942544/1033173712',
+  // rewardvideo: 'ca-app-pub-3940256099942544/5224354917'
 
   //--- Live Ads ---
-  // banner: 'ca-app-pub-5677932818243380/6573783804',
-  // interstitial: 'ca-app-pub-5677932818243380/5945074327',
-  // rewardvideo: 'ca-app-pub-5677932818243380/4057277584'
+  banner: 'ca-app-pub-5677932818243380/8171618118',
+  interstitial: 'ca-app-pub-5677932818243380/5982646465',
+  rewardvideo: 'ca-app-pub-5677932818243380/6721013067'
 };
 
 function initAds() {
@@ -31,7 +31,7 @@ function initAd() {
     bgColor: 'black', // color name, or '#RRGGBB'
     // x: integer,		// valid when set position to 0 / POS_XY
     // y: integer,		// valid when set position to 0 / POS_XY
-    isTesting: false, // set to true, to receiving test ad for testing purpose
+    isTesting: true, // set to true, to receiving test ad for testing purpose
     autoShow: false // auto show interstitial ad when loaded, set to false if prepare/show
   };
   AdMob.setOptions(defaultOptions);
